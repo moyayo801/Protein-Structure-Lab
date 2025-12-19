@@ -14,7 +14,7 @@ A specialized toolkit for the quantitative analysis of protein structures. This 
 ## 📐 Mathematical Foundations
 
 ### Structural Superposition (Kabsch Algorithm)
-To compare two structures $P$ and $Q$, we must find the optimal rotation matrix $R$ that minimizes the distance between them. 
+To compare two structures $P$ and $Q$, we must find the optimal rotation matrix $R$ that minimizes the distance between them.
 
 1. **Centroid Translation:**
    Moving both structures to the origin:
@@ -25,12 +25,17 @@ To compare two structures $P$ and $Q$, we must find the optimal rotation matrix 
 
 3. **Singular Value Decomposition (SVD):**
    We decompose $H$ into $U \Sigma V^T$ to find the optimal rotation:
-   $$R = V \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \det(VU^T) \end{pmatrix} U^T$$
+   
+   $$
+   R = V \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \det(VU^T) \end{pmatrix} U^T
+   $$
 
 ### Similarity Metric (RMSD)
 The Root-Mean-Square Deviation is calculated as:
-$$RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} ||P_i - Q_i||^2}$$
 
+$$
+RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} ||P_i - Q_i||^2}
+$$
 ---
 
 ## 📂 Project Structure
