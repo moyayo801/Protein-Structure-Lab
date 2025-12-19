@@ -25,8 +25,10 @@ To compare two structures $P$ and $Q$, we must find the optimal rotation matrix 
 
 3. **Singular Value Decomposition (SVD):**
    We decompose $H$ into $U \Sigma V^T$ to find the optimal rotation $R$:
-   
-   $$R = V \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \det(VU^T) \end{pmatrix} U^T$$
+
+   $$
+   R = V \left[ \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \det(VU^T) \end{array} \right] U^T
+   $$
 
 ### Similarity Metric (RMSD)
 The Root-Mean-Square Deviation (RMSD) is the standard measure of structural divergence:
