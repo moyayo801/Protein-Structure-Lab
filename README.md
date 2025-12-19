@@ -24,18 +24,15 @@ To compare two structures $P$ and $Q$, we must find the optimal rotation matrix 
    $$H = P_{centered}^T Q_{centered}$$
 
 3. **Singular Value Decomposition (SVD):**
-   We decompose $H$ into $U \Sigma V^T$ to find the optimal rotation:
+   We decompose $H$ into $U \Sigma V^T$ to find the optimal rotation $R$:
    
-   $$
-   R = V \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \det(VU^T) \end{pmatrix} U^T
-   $$
+   $$R = V \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \det(VU^T) \end{pmatrix} U^T$$
 
 ### Similarity Metric (RMSD)
-The Root-Mean-Square Deviation is calculated as:
+The Root-Mean-Square Deviation (RMSD) is the standard measure of structural divergence:
 
-$$
-RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} ||P_i - Q_i||^2}
-$$
+$$RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} ||P_i - Q_i||^2}$$
+
 ---
 
 ## 📂 Project Structure
