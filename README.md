@@ -1,8 +1,8 @@
-# 🔬 Protein-Structure-Lab: 3D Geometry & Structural Analysis
+#  Protein-Structure-Lab: 3D Geometry & Structural Analysis
 
 A specialized toolkit for the quantitative analysis of protein structures. This repository implements structural superposition, similarity metrics, and residue interaction mapping—core components of computational structural biology and drug design.
 
-## 🚀 Features
+##  Features
 
 * **PDB Infrastructure:** Automated fetching of structures from the Protein Data Bank (PDB) and extraction of $C\alpha$ backbone coordinates.
 * **Kabsch Algorithm:** Optimal structural alignment through Singular Value Decomposition (SVD).
@@ -11,7 +11,7 @@ A specialized toolkit for the quantitative analysis of protein structures. This 
 
 ---
 
-## 📐 Mathematical Foundations
+##  Mathematical Foundations
 
 ### Structural Superposition (Kabsch Algorithm)
 To compare two structures $P$ and $Q$, we must find the optimal rotation matrix $R$ that minimizes the distance between them.
@@ -37,19 +37,19 @@ $$RMSD = \sqrt{\frac{1}{N} \sum_{i=1}^{N} ||P_i - Q_i||^2}$$
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 * `src/`: Core logic for parsing, geometry math, and interaction analysis.
 * `usage/`: Demonstration scripts including structural verification and visualization.
 * `data/`: Local cache for PDB files (ignored by git).
 
-## 📊 Visualization
+##  Visualization
 The toolkit generates **Contact Maps**, which are binary representations of the 3D structure. Two residues $i$ and $j$ are considered "in contact" if:
 $$Distance(i, j) \leq 8.0 \, \text{Å}$$
 
 ---
 
-## 🛠️ Installation & Usage
+##  Installation & Usage
 
 1. **Setup Environment:**
 ```bash
